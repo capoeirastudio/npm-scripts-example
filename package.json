@@ -41,12 +41,12 @@
     "watch:test": "karma start",
     "watch:build": "nodemon -q -w assets/ --ext \".\" --exec \"npm run build\"",
 
-    "open:prod": "opener http://example.com",
-    "open:stage": "opener http://staging.example.internal",
+    "open:prod": "opener http://aws-website-capoeirastudioproduction-b7pn6.s3-website-us-east-1.amazonaws.com",
+    "open:stage": "opener http://aws-website-capoeirastudiostaging-fazir.s3-website-us-east-1.amazonaws.com",
     "open:dev": "opener http://localhost:9090",
 
-    "deploy:prod": "s3-cli sync ./dist/ s3://example-com/prod-site/",
-    "deploy:stage": "s3-cli sync ./dist/ s3://example-com/stage-site/",
+    "deploy:prod": "s3-cli sync ./dist/ s3://aws-website-capoeirastudioproduction-b7pn6.s3-website-us-east-1.amazonaws.com/",
+    "deploy:stage": "s3-cli sync ./dist/ s3://aws-website-capoeirastudiostaging-fazir.s3-website-us-east-1.amazonaws.com/",
 
     "serve": "http-server -p 9090 dist/",
     "live-reload": "live-reload --port 9091 dist/",
